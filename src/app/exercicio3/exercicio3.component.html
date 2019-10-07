@@ -1,0 +1,32 @@
+<h1>Exercício IV</h1>
+<form>
+    Número 1:
+    <input type="number" [(ngModel)]='n1' name="n1">
+    <br><br>
+    Número 2:
+    <input type="number" [(ngModel)]='n2' name="n2">
+    <br><br>
+    <button type="submit" (click)='compararSoma(n1,n2)'>Comparar</button>
+</form>
+
+<p>{{ resultado }}</p>
+
+<h1>Exercício V</h1>
+<form>
+    Digite um número:
+    <input type="number" [(ngModel)]='nTabuada' name="nTabuada">
+    <br><br>
+    <button type="submit" (click)='calcularTabuada(nTabuada)'>Calcular tabuada</button>
+</form>
+
+<table border="1" >
+    <thead>
+        <th>Tabuada do {{ nTabuada }}</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor='let resultado of resultadoTabuada'>
+            <td>{{ resultado }}</td>
+        </tr>
+    </tbody>
+</table>

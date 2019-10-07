@@ -1,0 +1,29 @@
+<h1>Exercício VIII</h1>
+<form>
+    Número 1:
+    <input type="text" [(ngModel)]='n1' name="n1">
+    <br><br>
+    Número 2:
+    <input type="text" [(ngModel)]='n2' name="n2">
+    <br><br>
+    <button type="submit" (click)='validarNumeros(n1, n2)'>Calcular</button>
+</form>
+<br>
+<table border="1" *ngIf='soma'>
+    <tr>
+        <th>Soma</th>
+        <td>{{ soma }}</td>
+    </tr>
+    <tr>
+        <th>Subtração</th>
+        <td>{{ subtracao }}</td>
+    </tr>
+    <tr>
+        <th>Multiplicação</th>
+        <td>{{ multiplicacao }}</td>
+    </tr>
+    <tr>
+        <th>Divisão</th>
+        <td>{{ divisao }}</td>
+    </tr>
+</table>

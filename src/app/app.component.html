@@ -1,0 +1,33 @@
+<h1>Exercício I</h1>
+
+<form>
+  Temperatura em °F:
+  <input type="number" [(ngModel)]="fahrenheit" name="fahrenheit">
+  <p>Valor em Cº: {{ celsius }}</p>
+
+  <br>
+  <button type="submit" (click)='converteCelsius(fahrenheit)'>Converter para °C</button>
+</form>
+
+<br>
+
+<h1>Exercício II</h1>
+<table border="1">
+  <thead>
+    <th>Disciplina</th>
+    <th>CH</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let disciplina of disciplinas">
+      <td>{{ disciplina.nome }}</td>
+      <td>{{ disciplina.ch }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<app-exercicio2></app-exercicio2>
+<app-exercicio3></app-exercicio3>
+<app-exercicio4></app-exercicio4>
+<app-exercicio5></app-exercicio5>
+<app-exercicio6></app-exercicio6>

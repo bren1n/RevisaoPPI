@@ -1,0 +1,35 @@
+<h1>Exercício III</h1>
+<form>
+    Nome do aluno:
+    <input type="text" [(ngModel)]='nome' name="nome">
+    <br><br>
+    Nota 1:
+    <input type="number" min="0" max="100" [(ngModel)]='nota1' name="nota1">
+    <br><br>
+    Nota 2:
+    <input type="number" min="0" max="100" [(ngModel)]='nota2' name="nota2">
+    <br><br>
+    <button type="submit" (click)='listarAluno()'>Cadastrar aluno</button>
+</form>
+
+<table *ngIf="alunos.length > 0" border="1">
+    <thead>
+        <th>Nome do aluno</th>
+        <th>Nota 1</th>
+        <th>Nota 2</th>
+        <th>Média</th>
+        <th>Situação</th>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let aluno of alunos">
+            <td>{{ aluno.nome }}</td>
+            <td>{{ aluno.nota1 }}</td>
+            <td>{{ aluno.nota2 }}</td>
+            <td>{{ aluno.media }}</td>
+            <td>
+                {{ aluno.aprovado }}
+            </td>
+        </tr>
+    </tbody>
+</table>
